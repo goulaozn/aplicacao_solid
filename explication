@@ -1,0 +1,14 @@
+Justificativas das Mudanças:
+
+SRP (Single Responsibility Principle): A lógica de cálculo de preço foi movida para a classe PriceCalculator, garantindo que a responsabilidade de cada classe 
+seja única, facilitando a manutenção.
+
+OCP (Open/Closed Principle): A classe Ingredient permite extensão para novos tipos de ingredientes através de subclasses (ExtraCheese, Pepperoni, Mushrooms), 
+sem precisar modificar a classe base.
+
+LSP (Liskov Substitution Principle): Subclasses de Ingredient podem substituir a classe base sem alterar a funcionalidade, garantindo o polimorfismo.
+
+ISP (Interface Segregation Principle): A interface Ingredient é simples e específica, garantindo que os clientes não dependam de métodos que não utilizam.
+
+DIP (Dependency Inversion Principle): A classe Pizza depende de uma abstração (PriceCalculator), facilitando futuras mudanças na lógica de cálculo de preço
+ sem impactar a classe Pizza.
